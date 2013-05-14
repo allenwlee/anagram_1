@@ -2,15 +2,12 @@
   <h1>Anagrams</h1>
 </div>
 <div class="container">
-  <table>
-    <tr>
-      <th>Anagrams for '<%= @word %>'</th>
-    </tr>
-    
-    <% @anagrams.each do |a| %>
-    <tr>  
-      <td><%= a %></td>
-    </tr>
-    <% end %>
-  </table>
+  <form method="post" action="/word">
+    <input type="text" name="word">
+    <input type="submit" value="Submit!">
+  </form>
 </div>
+
+<% if @anagrams %>
+  <%= erb :_anagrams, :layout => false %>
+<% end %>
