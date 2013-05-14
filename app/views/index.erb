@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Anagrams</h1>
+  <table>
+    <tr>
+      <th>Anagrams for '<%= @word %>'</th>
+    </tr>
+    
+    <% @anagrams.each do |a| %>
+    <tr>  
+      <td><%= a %></td>
+    </tr>
+    <% end %>
+  </table>
+</div>
